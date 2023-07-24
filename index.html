@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,9 @@
     <script>
       tailwind.config = {
         theme: {
+          backgroundImage: {
+            "banner-bg": "url('./images/banner.png')",
+          },
           extend: {
             colors: {
               "color-primary": "#B68C5A",
@@ -48,6 +51,7 @@
   </head>
   <body>
     <header class="container mx-auto">
+      <!-- navbar section -->
       <nav class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -112,9 +116,34 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn bg-color-primary text-white">Free Consultation</a>
+          <a class="btn bg-color-primary rounded-lg text-white"
+            >Free Consultation</a
+          >
         </div>
       </nav>
+      <!-- banner section -->
+      <div class="hero min-h-[calc(100vh-68px)] bg-banner-bg">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-2xl">
+            <h1 class="mb-5 text-white text-7xl font-garamond font-bold">
+              We Provide Effective Legal Solutions
+            </h1>
+            <p class="mb-5">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <input
+              class="input input-bordered pr-28 rounded-lg"
+              placeholder="Search your services"
+            />
+            <button class="btn bg-color-primary text-white border-0 rounded-lg">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
   </body>
 </html>
